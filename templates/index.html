@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo Tarr's Words</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <div class="header">
+        <div class="title">
+            <h2>Theo Tarr's Words</h2>
+        </div>
+    </div>
+    <div class="tabs">
+        <input type="radio" class="tab-button" id="tab-dictionary" name="tabs" checked="checked">
+        <label for="tab-dictionary">Dictionary</label>
+        <div class="tab">
+            <div class="grid">
+                <div class="la-to-en">
+                    <input placeholder="Latin to English" class="latin" type="text" id="latin" autocomplete="off">
+                    <i id="latin-button" class="fa fa-search search-button" aria-hidden="true"></i>
+                </div>
+                <div class="en-to-la">      
+                    <input placeholder="English to Latin" class="english" type="text" id="english" autocomplete="off">
+                    <i id="english-button" class="fa fa-search search-button english-search" aria-hidden="true"></i>   
+                </div>
+                <div class="latin-def-wrapper">
+                    <p id="latin-def" class="definition"></p>
+                </div>
+                <div class="english-def-wrapper">
+                    <p id="english-def" class="definition"></p>
+                </div>
+            </div>
+        </div>
+        <input type="radio" class="tab-button" id="tab-forms" name="tabs">
+        <label for="tab-forms">Forms</label>
+        <div class="tab">
+        </div>
+    </div>
+    <script src="static/script.js"></script>
+    <script src="static/tabNav.js"></script>
+</body>
+</html>
