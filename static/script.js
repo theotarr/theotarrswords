@@ -9,12 +9,10 @@ const englishDefinition = document.querySelector("#english-def");
 
 
 
-function latin_to_english() {
+function latinToEnglish() {
     if (latinToEnglishSearch.value != "") {
         fetch(`${window.origin}/la_to_en`, {
             method: "POST",
-            cache:"no-cache",
-            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -28,12 +26,10 @@ function latin_to_english() {
     }
 }
 
-function english_to_latin() {
+function englishToLatin() {
     if (englishToLatinSearch.value != "") {
         fetch(`${window.origin}/en_to_la`, {
             method: "POST",
-            cache:"no-cache",
-            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -66,25 +62,25 @@ function formatDefinition(text) {
 // event listeners
 latinToEnglishSearch.addEventListener("keyup", ({key}) => {
     if (key == "Enter" && latinToEnglishSearch.value != "") {
-        latin_to_english();
+        latinToEnglish();
     }
 });
 
 latinToEnglishButton.addEventListener("click", () => {
     if (latinToEnglishSearch.value != "") {
-        latin_to_english();
+        latinToEnglish();
     }
 })
 
 
 englishToLatinSearch.addEventListener("keyup", ({key}) => {
     if (key == "Enter" && englishToLatinSearch.value != "") {
-        english_to_latin();
+        englishToLatin();
     }
 });
 
 englishToLatinButton.addEventListener("click", () => {
     if (englishToLatinSearch.value != "") {
-        english_to_latin();
+        englishToLatin();
     }
 })

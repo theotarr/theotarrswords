@@ -18,29 +18,51 @@
         <input type="radio" class="tab-button" id="tab-dictionary" name="tabs" checked="checked">
         <label for="tab-dictionary">Dictionary</label>
         <div class="tab">
-            <div class="grid">
-                <div class="la-to-en">
-                    <input placeholder="Latin to English" class="latin" type="text" id="latin" autocomplete="off">
-                    <i id="latin-button" class="fa fa-search search-button" aria-hidden="true"></i>
-                </div>
-                <div class="en-to-la">      
-                    <input placeholder="English to Latin" class="english" type="text" id="english" autocomplete="off">
-                    <i id="english-button" class="fa fa-search search-button english-search" aria-hidden="true"></i>   
-                </div>
-                <div class="latin-def-wrapper">
-                    <p id="latin-def" class="definition"></p>
-                </div>
-                <div class="english-def-wrapper">
-                    <p id="english-def" class="definition"></p>
+            <div class="dictionary-wrap">
+                <div class="grid">
+                    <div class="la-to-en">
+                        <input placeholder="Latin to English" class="latin" type="text" id="latin" autocomplete="off">
+                        <i id="latin-button" class="fa fa-search search-button" aria-hidden="true"></i>
+                    </div>
+                    <div class="en-to-la">      
+                        <input placeholder="English to Latin" class="english" type="text" id="english" autocomplete="off">
+                        <i id="english-button" class="fa fa-search search-button english-search" aria-hidden="true"></i>   
+                    </div>
+                    <div class="latin-def-wrapper">
+                        <p id="latin-def" class="definition"></p>
+                    </div>
+                    <div class="english-def-wrapper">
+                        <p id="english-def" class="definition"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <input type="radio" class="tab-button" id="tab-forms" name="tabs">
         <label for="tab-forms">Forms</label>
         <div class="tab">
+            <div class="forms-wrapper">
+                <div class="forms">
+                    <select id="part-of-speech" class="select">
+                        <option value="noun">Noun</option>
+                        <option value="verb">Verb</option>
+                        <option value="adjective">Adjective</option>
+                        <option value="pronoun">Pronoun</option>
+                    </select>   
+                    <div class="forms-input-wrapper">
+                        <input id="forms-input" placeholder="Dictionary Entry Word or Infintive Form" type="text" autocomplete="off">
+                        <i id="forms-button" class="fa fa-search search-button english-search" aria-hidden="true"></i>   
+                    </div>   
+                </div>
+                <div id="forms-table"></div>
+            </div>
         </div>
     </div>
+    <div class="footer">
+        <p>Made by Theo Tarr Uses <a href="https://archives.nd.edu/words.html" target="_blank">William Whitaker's Words</a> and 
+            <a href="http://latindictionary.wikidot.com/" target="_blank">Wikidot</a>
+        </p>
+    </div>
     <script src="static/script.js"></script>
-    <script src="static/tabNav.js"></script>
+    <script src="static/forms.js"></script>
 </body>
 </html>
