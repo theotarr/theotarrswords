@@ -204,11 +204,18 @@ input {
     position: absolute;
     width: 75%;
     height: 70%;
+    overflow: scroll;
     box-shadow: var(--shadow);
     border-radius: 50px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.forms-wrapper p {
+    color: var(--greyDark-2);
+    text-align: center;
+    font-size: 1rem;
 }
 
 .forms {
@@ -238,6 +245,8 @@ input {
 
 .wiki-content-table {
     border-collapse: collapse;
+    height: 99%;
+    overflow: scroll;
     margin: 0 auto;
     font-size: 0.9em;
     min-width: 400px;
