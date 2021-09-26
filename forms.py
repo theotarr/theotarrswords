@@ -11,9 +11,15 @@ def get_forms(query):
     for tag in page_content:
         p_tags = tag.find_all("p")
         for tag in p_tags:
-            if tag == p_tags[-3]:
-                break
             parsed_html += str(tag)
+            if "declension" in str(tag).lower() and "noun" in query:
+                break
+            elif "main forms" in str(tag).lower() and ("verb" in query or "adjective" in query):
+                break
+            elif "gender" in str(tag).lower() and "pronoun" in query:
+                break
+            
+            
 
     table = html.find_all("table", {"class": "wiki-content-table"})
     for tag in table:
